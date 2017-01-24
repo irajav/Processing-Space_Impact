@@ -7,12 +7,11 @@ class Welcome
    int row = 5;
    
    PFont font;
+   PFont font2;
    
-   int ang = 1;
-   int ang2 = 2;
-   int ang3 = 3;
+
    
-  void w()
+  void welcome()
   {
     frame();
     grid();
@@ -24,7 +23,6 @@ class Welcome
   {   
     
     stroke(41,214,255);
-    strokeWeight(1);
     
     
     line(x, y, width-x, y);
@@ -51,9 +49,12 @@ class Welcome
   void screen()
   {
     font = loadFont("Rockwell-CondensedBold-30.vlw");
+    font2 = loadFont("LeelawadeeUI-Semilight-20.vlw");
     textFont(font, 30);
     text("SPACE", x+90, y+170);
     text("IMPACT", x+140, y+200);
+    textFont(font2,20);
+    text("Press spaceship to play", width/2-90, height-135);
   }
   
   void center()
@@ -68,7 +69,7 @@ class Welcome
     arc(width/2, height/2+50, 170, 170, radians(-ang2+30), radians(-ang2+240));
     arc(width/2, height/2+50, 180, 180, radians(ang3), radians(ang3+280));
     
-    image(spaceship,width/2-48, height/2-5, 100, 100);
+    image(spaceship,spaceX, spaceY, 100, 100);
+
   }
-  
 }
