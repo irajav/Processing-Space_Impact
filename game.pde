@@ -13,7 +13,7 @@ boolean b;
    int spaceX = 128;
    int spaceY = 290;
    
-   int speed = 5;
+   int speed = 8;
 
 void setup()
 {
