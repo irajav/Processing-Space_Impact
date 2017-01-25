@@ -5,5 +5,10 @@ class Loading
     welcome.welcome();
     
     spaceY -= speed;
+    
+    if (spaceY < 0 )
+    {
+      first.first();
+    }
   }
 }

@@ -1,5 +1,6 @@
 Welcome welcome;
 Loading loading;
+First first;
 
 PImage spaceship;
 
@@ -13,7 +14,7 @@ boolean b;
    int spaceX = 128;
    int spaceY = 290;
    
-   int speed = 8;
+   int speed = 5;
 
 void setup()
 {
@@ -23,6 +24,7 @@ void setup()
   
   welcome = new Welcome();
   loading = new Loading();
+  first = new First();
 }
 
 void draw()
