@@ -4,7 +4,8 @@ class First
   {
     background(gradient);
     control();
-    asteroid();
+    ast();
+    
   }
   
   void control()
@@ -44,22 +45,14 @@ class First
     line(gameX+48,gameY+5,gameX,gameY*-200);
   }
   
-  void asteroid()
+  void ast()
   {
-    image(asteroid,astX,astY, 70,70);
-    if(frameCount%speed == 0)
+        for (int i = 0; i< asteroids.length; i++)
     {
-      astY += 20;
-      astX = astX + random(-60,60);
-      
-      if(astX<0)
-      {
-        astX = 0;
-        astX += 10;
-      }
-      
-
+      asteroids[i].asteroids();
     }
-      
   }
+
+      
+  
 }

@@ -6,6 +6,8 @@ PImage spaceship;
 PImage gradient;
 PImage asteroid;
 
+Asteroid[] asteroids = new Asteroid[5];
+
 boolean load = false;
 
 
@@ -34,6 +36,11 @@ void setup()
   welcome = new Welcome();
   loading = new Loading();
   first = new First();
+  
+  for (int i=0; i<asteroids.length; i++)
+  {
+    asteroids[i] = new Asteroid(100+i*100, 60, random(32,72));
+  }
 }
 
 void draw()
@@ -45,6 +52,8 @@ void draw()
   {
     loading.loading();
   }
+  
+
 
 
 }
