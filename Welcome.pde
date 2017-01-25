@@ -3,6 +3,9 @@ class Welcome
    int x = 10;
    int y = 10;
    
+   int x2 = 20;
+   int y2 = 20;
+   
    int col = 5; 
    int row = 5;
    
@@ -29,6 +32,12 @@ class Welcome
     line(x, y, x, height-y);
     line(x, height-y, width-x, height-y);
     line(width-x, height-y, width-x, y);
+    
+    line(x2, y2, width-x2,y2);
+    line(x2,y2,x2,height-y2);
+    line(x2,height-y2,width-x2,height-y2);
+    line(width-x2,height-y2,width-x2,y2);
+    
   }
   
   void grid()
