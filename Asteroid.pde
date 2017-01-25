@@ -24,6 +24,6 @@ class Asteroid
   void descend()
   {
     y++;
-    x = x+random(-2,2);
+    x = x+random(-3,3);
   }
 }

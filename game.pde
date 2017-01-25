@@ -39,7 +39,7 @@ void setup()
   
   for (int i=0; i<asteroids.length; i++)
   {
-    asteroids[i] = new Asteroid(100+i*100, 60, random(32,72));
+    asteroids[i] = new Asteroid(100+i*50, 40, random(36,72));
   }
 }
 
