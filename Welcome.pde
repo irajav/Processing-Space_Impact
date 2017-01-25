@@ -20,6 +20,11 @@ class Welcome
     grid();
     screen();
     center();
+    
+    if (key == ' ')
+    {
+      b=!b;
+    }
   }
   
   void frame()
@@ -63,7 +68,7 @@ class Welcome
     text("SPACE", x+90, y+170);
     text("IMPACT", x+140, y+200);
     textFont(font2,20);
-    text("Press spaceship to play", width/2-90, height-135);
+    text("Press spacebar to play!", width/2-90, height-135);
   }
   
   void center()
@@ -81,4 +86,8 @@ class Welcome
     image(spaceship,spaceX, spaceY, 100, 100);
 
   }
+  
+  
+
+
 }

@@ -4,4 +4,9 @@ class First
   {
     background(gradient);
   }
+  
+  void control()
+  {
+    image(spaceship,100, 20, 100, 100);
+  }
 }

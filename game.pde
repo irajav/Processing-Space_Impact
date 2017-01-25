@@ -42,12 +42,4 @@ void draw()
 }
 
 
-void mousePressed()
-{
-  if(mouseX > spaceX && mouseY > spaceY )
-  {
-    b=!b;
-  }
-}
-
   
