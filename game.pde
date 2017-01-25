@@ -5,7 +5,7 @@ First first;
 PImage spaceship;
 PImage gradient;
 
-boolean b;
+boolean load = false;
 
 
    int ang = 1;
@@ -34,12 +34,16 @@ void draw()
   background(0);
   welcome.welcome();
   
-  if(b==true)
+  if(load)
   {
     loading.loading();
   }
 
+
 }
 
-
+void mousePressed()
+{
+  load = true;
+}
   

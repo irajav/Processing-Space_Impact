@@ -21,10 +21,6 @@ class Welcome
     screen();
     center();
     
-    if (key == ' ')
-    {
-      b=!b;
-    }
   }
   
   void frame()
