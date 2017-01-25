@@ -4,6 +4,7 @@ First first;
 
 PImage spaceship;
 PImage gradient;
+PImage asteroid;
 
 boolean load = false;
 
@@ -19,13 +20,16 @@ boolean load = false;
    
    int gameX = 125;
    int gameY = 500;
-
+   
+   float astX = 30;
+   float astY = 30;
 void setup()
 {
   size(348,600);
   
   spaceship = loadImage("spaceship.png");
   gradient = loadImage("gradient.jpg");
+  asteroid = loadImage("asteroid.png");
   
   welcome = new Welcome();
   loading = new Loading();

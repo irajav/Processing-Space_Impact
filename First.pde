@@ -4,6 +4,7 @@ class First
   {
     background(gradient);
     control();
+    asteroid();
   }
   
   void control()
@@ -41,7 +42,24 @@ class First
   {
     stroke(random(255),random(255),random(255));
     line(gameX+48,gameY+5,gameX,gameY*-200);
+  }
+  
+  void asteroid()
+  {
+    image(asteroid,astX,astY, 70,70);
+    if(frameCount%speed == 0)
+    {
+      astY += 20;
+      astX = astX + random(-60,60);
+      
+      if(astX<0)
+      {
+        astX = 0;
+        astX += 10;
+      }
+      
 
-    
+    }
+      
   }
 }
