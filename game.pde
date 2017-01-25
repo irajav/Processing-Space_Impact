@@ -16,6 +16,9 @@ boolean load = false;
    int spaceY = 290;
    
    int speed = 5;
+   
+   int gameX = 125;
+   int gameY = 500;
 
 void setup()
 {
@@ -44,6 +47,9 @@ void draw()
 
 void mousePressed()
 {
-  load = true;
+  if(mouseX > spaceX && mouseY > spaceY)
+  {
+    load = true;
+  }
 }
   

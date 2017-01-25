@@ -64,7 +64,7 @@ class Welcome
     text("SPACE", x+90, y+170);
     text("IMPACT", x+140, y+200);
     textFont(font2,20);
-    text("Press spacebar to play!", width/2-90, height-135);
+    text("Press spaceship to play!", width/2-90, height-135);
   }
   
   void center()
