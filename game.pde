@@ -3,6 +3,7 @@ Loading loading;
 First first;
 
 PImage spaceship;
+PImage gradient;
 
 boolean b;
 
@@ -18,9 +19,10 @@ boolean b;
 
 void setup()
 {
-  size(350,600);
+  size(348,600);
   
   spaceship = loadImage("spaceship.png");
+  gradient = loadImage("gradient.jpg");
   
   welcome = new Welcome();
   loading = new Loading();
