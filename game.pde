@@ -6,11 +6,7 @@ PImage spaceship;
 PImage gradient;
 PImage asteroid;
 
-Asteroid[] asteroids = new Asteroid[5];
-
 boolean load = false;
-
-//cursor
 
    int ang = 1;
    int ang2 = 2;
@@ -24,12 +20,22 @@ boolean load = false;
    int gameX = 125;
    int gameY = 500;
    
-   float astX = 30;
-   float astY = 30;
+   int getRandomX()
+   {
+     return int(random(50,250));
+     
+   }
+   
+   int size = 30;
+   
+   int[] astX = {getRandomX(), getRandomX(), getRandomX(), getRandomX()};
+   int[] astY = {0,0,0,0};
+   
 void setup()
 {
   size(348,600);
-  
+  smooth();
+
   spaceship = loadImage("spaceship.png");
   gradient = loadImage("gradient.jpg");
   asteroid = loadImage("asteroid.png");
@@ -38,10 +44,6 @@ void setup()
   loading = new Loading();
   first = new First();
   
-  for (int i=0; i<asteroids.length; i++)
-  {
-    asteroids[i] = new Asteroid(100+i*50, 40, random(36,72));
-  }
 }
 
 void draw()

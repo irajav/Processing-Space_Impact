@@ -20,7 +20,7 @@ class Welcome
     grid();
     screen();
     center();
-
+    fxn();
   
   }
   

@@ -5,7 +5,8 @@ class First
     
     background(gradient);
     control();
-    ast();
+    asteroids();
+
     
   }
   
@@ -46,14 +47,17 @@ class First
     line(gameX+48,gameY+5,gameX,gameY*-200);
   }
   
-  void ast()
+  void asteroids()
   {
-        for (int i = 0; i< asteroids.length; i++)
+    for(int i=0; i<4; i++)
     {
-      asteroids[i].asteroids();
+      image(asteroid, astX[i], astY[i]++, size,size);
     }
   }
+}
+    
+  
+
 
       
   
-}
