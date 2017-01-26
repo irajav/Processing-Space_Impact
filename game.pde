@@ -10,6 +10,7 @@ Asteroid[] asteroids = new Asteroid[5];
 
 boolean load = false;
 
+//cursor
 
    int ang = 1;
    int ang2 = 2;
@@ -52,7 +53,6 @@ void draw()
   {
     loading.loading();
   }
-  
 
 
 

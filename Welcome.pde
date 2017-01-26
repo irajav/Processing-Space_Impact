@@ -20,7 +20,8 @@ class Welcome
     grid();
     screen();
     center();
-    
+
+  
   }
   
   void frame()
@@ -83,7 +84,20 @@ class Welcome
 
   }
   
+      void fxn()
+  {
+        if (mouseX > spaceX && mouseY > spaceY)
+    {
+      cursor(HAND);
+    }
+    else
+    {
+      cursor(ARROW);
+    }
+    
+  }
   
+
 
 
 }
