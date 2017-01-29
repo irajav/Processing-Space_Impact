@@ -81,6 +81,8 @@ class Welcome
     arc(width/2, height/2+50, 180, 180, radians(ang3), radians(ang3+280));
     
     image(spaceship,spaceX, spaceY, 100, 100);
+    
+
 
   }
   

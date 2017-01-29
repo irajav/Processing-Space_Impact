@@ -5,9 +5,10 @@ class First
     
     background(gradient);
     control();
-    asteroids();
+    
     cannon(gameX);
-   
+    asteroids();
+    over();
 
     
   }
@@ -51,7 +52,7 @@ class First
   
   void asteroids()
   {
-    for(int i=0; i<4; i++)
+    for(int i=0; i<5; i++)
     {
       image(asteroid, astX[i], astY[i]++, size,size);
     }
@@ -61,17 +62,32 @@ class First
   {
     boolean strike = false;
     
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 5; i++)
     {
       if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
       {
         strike = true;
         laser();
-        image(asteroid,astX[i],astY[i],size+10,size+10);
+        image(asteroid,astX[i],astY[i],size,size);
         bang.play();
         astX[i]=getRandomX();
         astY[i] = 0;
       }
+    }
+  }
+  
+  void over()
+  {
+    for(int i = 0; i<5; i++)
+    {
+      if(astY[i]==height)
+      {
+        //finish.finish();
+        text("GAME OVER!!" , width/2,height/2);
+        noLoop();
+      }
+      
+
     }
   }
 }

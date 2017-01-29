@@ -1,9 +1,11 @@
 Welcome welcome;
 Loading loading;
 First first;
+Finish finish;
 
 import processing.sound.*;
 SoundFile bang;
+SoundFile powerup;
 
 PImage spaceship;
 PImage gradient;
@@ -31,14 +33,15 @@ boolean shoot = false;
      
    }
    
-   int size = 30;
+   int size = 50;
    
-   int[] astX = {getRandomX(), getRandomX(), getRandomX(), getRandomX()};
-   int[] astY = {0,0,0,0};
+   int[] astX = {getRandomX(), getRandomX(), getRandomX(), getRandomX(), getRandomX()};
+   int[] astY = {0,0,0,0,0};
    
 void setup()
 {
   size(348,600);
+  frameRate(-50);
   smooth();
 
   spaceship = loadImage("spaceship.png");
@@ -48,8 +51,10 @@ void setup()
   welcome = new Welcome();
   loading = new Loading();
   first = new First();
+  finish = new Finish();
   
   bang = new SoundFile(this, "bang.mp3");
+  powerup = new SoundFile(this, "powerup.mp3");
   
 }
 
@@ -61,6 +66,7 @@ void draw()
   if(load)
   {
     loading.loading();
+    
   }
   
 
@@ -74,6 +80,7 @@ void mousePressed()
   if(mouseX > spaceX && mouseY > spaceY)
   {
     load = true;
+    powerup.play();
   }
 }
   
