@@ -6,6 +6,8 @@ class First
     background(gradient);
     control();
     asteroids();
+    cannon(gameX);
+   
 
     
   }
@@ -52,6 +54,24 @@ class First
     for(int i=0; i<4; i++)
     {
       image(asteroid, astX[i], astY[i]++, size,size);
+    }
+  }
+  
+  void cannon(int shotX)
+  {
+    boolean strike = false;
+    
+    for(int i = 0; i < 4; i++)
+    {
+      if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
+      {
+        strike = true;
+        laser();
+        image(asteroid,astX[i],astY[i],size+10,size+10);
+        bang.play();
+        astX[i]=getRandomX();
+        astY[i] = 0;
+      }
     }
   }
 }

@@ -86,7 +86,7 @@ class Welcome
   
       void fxn()
   {
-        if (mouseX > spaceX && mouseY > spaceY)
+        if (mouseX > spaceX && mouseY > spaceY && mouseX < spaceX + 90 && mouseY < spaceY + 100)
     {
       cursor(HAND);
     }

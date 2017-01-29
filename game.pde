@@ -2,11 +2,16 @@ Welcome welcome;
 Loading loading;
 First first;
 
+import processing.sound.*;
+SoundFile bang;
+
 PImage spaceship;
 PImage gradient;
 PImage asteroid;
 
 boolean load = false;
+
+boolean shoot = false;
 
    int ang = 1;
    int ang2 = 2;
@@ -44,6 +49,8 @@ void setup()
   loading = new Loading();
   first = new First();
   
+  bang = new SoundFile(this, "bang.mp3");
+  
 }
 
 void draw()
@@ -55,6 +62,8 @@ void draw()
   {
     loading.loading();
   }
+  
+
 
 
 
