@@ -90,7 +90,9 @@ class Welcome
   {
         if (mouseX > spaceX && mouseY > spaceY && mouseX < spaceX + 90 && mouseY < spaceY + 100)
     {
+      
       cursor(HAND);
+      
     }
     else
     {

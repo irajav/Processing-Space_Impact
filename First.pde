@@ -1,5 +1,6 @@
 class First
 {
+  float x = 40;
   void first()
   {
     
@@ -7,10 +8,35 @@ class First
     background(gradient);
     control();
     
+    scoring();
     cannon(gameX);
     asteroids();
+    next();
     over();
+    
 
+    
+    
+    
+
+    
+  }
+  
+  void scoring()
+  {
+      text(one[one_index], x,30);
+      text(score, width-40, 40);
+      
+      x = x-5;
+      
+      float w = textWidth(one[one_index]);
+      {
+        if (x < -w+40)
+        {
+          x = w+40;
+          one_index = (one_index+1)%one.length;
+        }
+      }
     
   }
   
@@ -38,6 +64,10 @@ class First
       {
         gameX += 5;
       }
+      else if(keyCode == UP)
+      {
+        laser();
+      }
     }
   }
   
@@ -45,6 +75,11 @@ class First
   {
     stroke(random(255),random(255),random(255));
     line(gameX+48,gameY+5,gameX,gameY*-200);
+  }
+  
+  void missile()
+  {
+    image(missile, 40,50,size,size);
   }
   
   void asteroids()
@@ -73,17 +108,28 @@ class First
               image(asteroid,astX[i],astY[i],size,size);
               bang.play();
               astX[i]=getRandomX();
-              astY[i] = 0;
+              astY[i] = 40;
+              
+              score++;
             }
           }
       }
+  }
+  
+  void next()
+  {
+    if(score >= 3)
+    {
+      second.second();
+      
+    }
   }
   
   void over()
   {
     for(int i = 0; i<5; i++)
     {
-      if(astY[i]==height)
+      if(astY[i]==height-30)
       {
         //finish.finish();
         text("GAME OVER!!" , width/2,height/2);

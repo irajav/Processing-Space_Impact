@@ -2,6 +2,7 @@ Welcome welcome;
 Loading loading;
 First first;
 Finish finish;
+Second second;
 
 import processing.sound.*;
 SoundFile bang;
@@ -10,10 +11,20 @@ SoundFile powerup;
 PImage spaceship;
 PImage gradient;
 PImage asteroid;
+PImage missile;
 
 boolean load = false;
 
 boolean shoot = false;
+
+String[] one = 
+{
+  "******LEVEL 1*******"
+};
+
+int one_index = 0;
+
+int score = 0;
 
    int ang = 1;
    int ang2 = 2;
@@ -36,7 +47,7 @@ boolean shoot = false;
    int size = 50;
    
    int[] astX = {getRandomX(), getRandomX(), getRandomX(), getRandomX(), getRandomX()};
-   int[] astY = {0,0,0,0,0};
+   int[] astY = {40,40,40,40,40};
    
 void setup()
 {
@@ -47,11 +58,13 @@ void setup()
   spaceship = loadImage("spaceship.png");
   gradient = loadImage("gradient.jpg");
   asteroid = loadImage("asteroid.png");
+  missile = loadImage("missile.png");
   
   welcome = new Welcome();
   loading = new Loading();
   first = new First();
   finish = new Finish();
+  second = new Second();
   
   bang = new SoundFile(this, "bang.mp3");
   powerup = new SoundFile(this, "powerup.mp3");
