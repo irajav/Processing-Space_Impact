@@ -70,9 +70,6 @@ void draw()
   }
   
 
-
-
-
 }
 
 void mousePressed()

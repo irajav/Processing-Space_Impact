@@ -3,6 +3,7 @@ class First
   void first()
   {
     
+    noCursor();
     background(gradient);
     control();
     
@@ -37,10 +38,6 @@ class First
       {
         gameX += 5;
       }
-      else if(keyCode == UP)
-      {
-        laser();
-      }
     }
   }
   
@@ -61,19 +58,25 @@ class First
   void cannon(int shotX)
   {
     boolean strike = false;
+
     
-    for(int i = 0; i < 5; i++)
-    {
-      if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
+    if(keyCode == UP)
       {
-        strike = true;
-        laser();
-        image(asteroid,astX[i],astY[i],size,size);
-        bang.play();
-        astX[i]=getRandomX();
-        astY[i] = 0;
+        
+
+          for(int i = 0; i < 5; i++)
+          {
+            if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
+            {
+              strike = true;
+              laser();
+              image(asteroid,astX[i],astY[i],size,size);
+              bang.play();
+              astX[i]=getRandomX();
+              astY[i] = 0;
+            }
+          }
       }
-    }
   }
   
   void over()
