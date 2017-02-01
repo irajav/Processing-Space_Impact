@@ -13,12 +13,7 @@ class First
     asteroids();
     next();
     over();
-    
-
-    
-    
-    
-
+   
     
   }
   
@@ -120,7 +115,9 @@ class First
   {
     if(score >= 3)
     {
+      
       second.second();
+      
       
     }
   }

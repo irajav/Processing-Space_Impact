@@ -5,5 +5,9 @@ class Second
     background(0);
     
     
+    text(score, width-40, 40);
+      
+    
+    
   }
 }
