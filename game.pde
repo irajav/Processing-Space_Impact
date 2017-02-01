@@ -25,6 +25,7 @@ String[] one =
 int one_index = 0;
 
 int score = 0;
+int score2 = 0;
 
    int ang = 1;
    int ang2 = 2;
