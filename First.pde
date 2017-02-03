@@ -113,12 +113,10 @@ class First
   
   void next()
   {
-    if(score >= 3)
+    if(score >= 20)
     {
       
       second.second();
-      
-      
       
       
       

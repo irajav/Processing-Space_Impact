@@ -3,9 +3,7 @@ class Second
   void second()
   {
     //background(0);
-    
-    
-    
+ 
         noCursor();
     background(gradient);
     control();
