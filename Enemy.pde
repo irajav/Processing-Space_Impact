@@ -6,8 +6,8 @@ class Enemy
   void enemy()
   {
     
-    y=y+7;
-    image(missile,r,y,10,10);
+    y=y+10;
+    image(missile,r,y,80,80);
     
     if(y>height)
     {
