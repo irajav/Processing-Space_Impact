@@ -62,6 +62,7 @@ class First
       else if(keyCode == UP)
       {
         laser();
+        pew.play();
       }
     }
   }
@@ -92,7 +93,7 @@ class First
     
     if(keyCode == UP)
       {
-        
+   
 
           for(int i = 0; i < 5; i++)
           {
@@ -102,6 +103,7 @@ class First
               laser();
               image(asteroid,astX[i],astY[i],size,size);
               bang.play();
+              pew.stop();
               astX[i]=getRandomX();
               astY[i] = 40;
               

@@ -7,6 +7,8 @@ Second second;
 import processing.sound.*;
 SoundFile bang;
 SoundFile powerup;
+SoundFile pew;
+
 
 PImage spaceship;
 PImage gradient;
@@ -69,6 +71,7 @@ void setup()
   
   bang = new SoundFile(this, "bang.mp3");
   powerup = new SoundFile(this, "powerup.mp3");
+  pew = new SoundFile(this, "pew.wav");
   
 }
 
