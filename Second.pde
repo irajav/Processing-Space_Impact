@@ -8,6 +8,7 @@ class Second
     background(gradient);
     control();
     
+    enemy.enemy();
 
     cannon(gameX);
  //   asteroids();

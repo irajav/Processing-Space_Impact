@@ -3,6 +3,7 @@ Loading loading;
 First first;
 Finish finish;
 Second second;
+Enemy enemy;
 
 import processing.sound.*;
 SoundFile bang;
@@ -52,6 +53,11 @@ int score2 = 0;
    int[] astX = {getRandomX(), getRandomX(), getRandomX(), getRandomX(), getRandomX()};
    int[] astY = {40,40,40,40,40};
    
+  int missileDrops = 5;
+  Enemy[] drops = new Enemy[missileDrops]; 
+   
+   
+   
 void setup()
 {
   size(348,600);
@@ -72,6 +78,12 @@ void setup()
   bang = new SoundFile(this, "bang.mp3");
   powerup = new SoundFile(this, "powerup.mp3");
   pew = new SoundFile(this, "pew.wav");
+  
+  for (int i = 0; i <drops.length; i++)
+  {
+    drops[i] = new Enemy();
+    enemy = new Enemy();
+  }
   
 }
 

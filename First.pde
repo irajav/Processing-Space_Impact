@@ -73,10 +73,6 @@ class First
     line(gameX+48,gameY+5,gameX,gameY*-200);
   }
   
-  void missile()
-  {
-    image(missile, 40,50,size,size);
-  }
   
   void asteroids()
   {
