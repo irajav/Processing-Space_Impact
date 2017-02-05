@@ -1,6 +1,7 @@
 class First
 {
   float x = 40;
+  
   void first()
   {
     
@@ -39,7 +40,7 @@ class First
   
   void control()
   {
-    image(spaceship,gameX,gameY, 100, 100);
+    image(spaceship,gameX,gameY, spaceSize,spaceSize);
     
     if(gameX < 0)
     { 
@@ -113,16 +114,13 @@ class First
   
       void next()
   {
-    if(score >= 20)
+    if(score >= 5)
     {
       
       
       enemy.enemy();
       
-       if ( r >= gameX)
-      {
-        finish.finish();
-      }
+
 
     }
   }

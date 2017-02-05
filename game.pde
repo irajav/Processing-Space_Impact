@@ -35,6 +35,8 @@ int score2 = 0;
    int ang2 = 2;
    int ang3 = 3;
    
+   int spaceSize = 100;
+   
    int spaceX = 128;
    int spaceY = 290;
    
