@@ -1,8 +1,6 @@
 class Enemy
 {
-  float r = random(340);
-  float y = random(20);
-  
+
   void enemy()
   {
     
@@ -16,4 +14,6 @@ class Enemy
       
     }
   }
+  
+  
 }

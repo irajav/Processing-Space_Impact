@@ -14,6 +14,7 @@ class First
    asteroids();
    next();
    over();
+ //  target();
    
     
   }
@@ -118,10 +119,15 @@ class First
       
       enemy.enemy();
       
-      
-      
+       if ( r >= gameX)
+      {
+        finish.finish();
+      }
+
     }
   }
+  
+
 
   
   void over()

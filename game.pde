@@ -57,6 +57,9 @@ int score2 = 0;
   int missileDrops = 5;
   Enemy[] drops = new Enemy[missileDrops]; 
    
+   float r = random(340);
+  float y = random(20);
+  
    
    
 void setup()
