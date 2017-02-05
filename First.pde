@@ -9,8 +9,9 @@ class First
     control();
     
     scoring();
+    asteroids.asteroids();
     cannon(gameX);
-    asteroids();
+   // asteroids();
     next();
     over();
    
@@ -113,6 +114,7 @@ class First
   {
     if(score >= 20)
     {
+      
       
       second.second();
       

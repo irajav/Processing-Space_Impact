@@ -4,13 +4,13 @@ class Second
   {
     //background(0);
  
-        noCursor();
+    noCursor();
     background(gradient);
     control();
     
     enemy.enemy();
 
-    cannon(gameX);
+    //cannon(gameX);
  //   asteroids();
  
  text(score2, width-20, 40);
@@ -55,19 +55,6 @@ class Second
   {
     stroke(random(255),random(255),random(255));
     line(gameX+48,gameY+5,gameX,gameY*-200);
-  }
-  
-  void missile()
-  {
-    image(missile, 40,50,size,size);
-  }
-  
-  void asteroids()
-  {
-    for(int i=0; i<5; i++)
-    {
-      image(asteroid, astX[i], astY[i]++, size,size);
-    }
   }
   
   void cannon(int shotX)
