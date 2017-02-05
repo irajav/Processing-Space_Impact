@@ -8,14 +8,15 @@ class Enemy
   void mission(float x)
   {
     
-    y=y+10;
+    y=y+13;
     image(missile,r,y,enemyS,enemyS);
     strokeWeight(3);
    stroke(random(255),random(255),random(255));
    line(r+40,y+90,r+40,y+800);
     
     first.control();
-       
+    
+    
        if ( x >= r-enemyS/2 && x<= r+enemyS/2)
 
       {
