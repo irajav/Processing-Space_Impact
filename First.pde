@@ -9,9 +9,9 @@ class First
     control();
     
     scoring();
-    asteroids.asteroids();
+  //  asteroids.asteroids();
     cannon(gameX);
-   // asteroids();
+   asteroids();
    next();
    over();
    

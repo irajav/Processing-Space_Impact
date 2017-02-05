@@ -4,7 +4,7 @@ First first;
 Finish finish;
 //Second second;
 Enemy enemy;
-Asteroids asteroids;
+//Asteroids asteroids;
 
 import processing.sound.*;
 SoundFile bang;
@@ -76,7 +76,7 @@ void setup()
   finish = new Finish();
  // second = new Second();
   
-  asteroids = new Asteroids();
+//  asteroids = new Asteroids();
   
   bang = new SoundFile(this, "bang.mp3");
   powerup = new SoundFile(this, "powerup.mp3");
