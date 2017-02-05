@@ -134,9 +134,9 @@ class First
     {
       if(astY[i]==height-30)
       {
-        //finish.finish();
-        text("GAME OVER!!" , width/2,height/2);
-        noLoop();
+
+        finish.finish();
+ 
       }
       
 
