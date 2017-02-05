@@ -112,7 +112,7 @@ class First
   
       void next()
   {
-    if(score >= 5)
+    if(score >= 20)
     {
       
       
