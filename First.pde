@@ -12,8 +12,8 @@ class First
     asteroids.asteroids();
     cannon(gameX);
    // asteroids();
-    next();
-    over();
+   next();
+   over();
    
     
   }
@@ -110,18 +110,19 @@ class First
       }
   }
   
-  void next()
+      void next()
   {
-    if(score >= 20)
+    if(score >= 5)
     {
       
       
-      second.second();
+      enemy.enemy();
       
       
       
     }
   }
+
   
   void over()
   {

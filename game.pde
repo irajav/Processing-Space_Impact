@@ -2,7 +2,7 @@ Welcome welcome;
 Loading loading;
 First first;
 Finish finish;
-Second second;
+//Second second;
 Enemy enemy;
 Asteroids asteroids;
 
@@ -74,7 +74,7 @@ void setup()
   loading = new Loading();
   first = new First();
   finish = new Finish();
-  second = new Second();
+ // second = new Second();
   
   asteroids = new Asteroids();
   
@@ -100,10 +100,10 @@ void draw()
     loading.loading();
     
   }
-  
-  
-
 }
+
+
+
 
 void mousePressed()
 {
