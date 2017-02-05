@@ -37,6 +37,8 @@ int score2 = 0;
    
    int spaceSize = 100;
    
+   int enemyS = 80;
+   
    int spaceX = 128;
    int spaceY = 290;
    

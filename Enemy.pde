@@ -1,14 +1,19 @@
 class Enemy
 {
-
+  
   void enemy()
+  {
+    mission(gameX);
+  }
+  void mission(float x)
   {
     
     y=y+10;
-    image(missile,r,y,80,80);
+    image(missile,r,y,enemyS,enemyS);
     
+    first.control();
        
-       if ( y >= (gameY-size/2)&&y<= (gameY+size/2) )
+       if ( x >= r-enemyS/2 && x<= r+enemyS/2)
        
        
 
