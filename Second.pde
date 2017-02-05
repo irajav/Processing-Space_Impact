@@ -5,7 +5,7 @@ class Second
     //background(0);
  
     noCursor();
-    background(gradient);
+    background(galaxy);
     control();
     
     enemy.enemy();

@@ -13,9 +13,10 @@ SoundFile pew;
 
 
 PImage spaceship;
-PImage gradient;
+//PImage gradient;
 PImage asteroid;
 PImage missile;
+PImage galaxy;
 
 boolean load = false;
 
@@ -73,9 +74,11 @@ void setup()
   smooth();
 
   spaceship = loadImage("spaceship.png");
-  gradient = loadImage("gradient.jpg");
+//  gradient = loadImage("gradient.jpg");
   asteroid = loadImage("asteroid.png");
   missile = loadImage("missile.png");
+  
+  galaxy = loadImage("galaxy.jpg");
   
   welcome = new Welcome();
   loading = new Loading();

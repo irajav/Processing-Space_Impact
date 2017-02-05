@@ -6,7 +6,7 @@ class First
   {
     
     noCursor();
-    background(gradient);
+    background(galaxy);
     control();
     
     scoring();
