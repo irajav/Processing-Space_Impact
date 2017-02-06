@@ -57,10 +57,12 @@ class First
       if(keyCode == LEFT)
       {
         gameX -= 5;
+        gameY -= 0.1;
       }
       else if(keyCode == RIGHT)
       {
         gameX += 5;
+
       }
       else if(keyCode == UP)
       {

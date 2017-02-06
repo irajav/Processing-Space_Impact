@@ -14,10 +14,9 @@ class Enemy
    stroke(random(255),random(255),random(255));
    line(r+40,y+90,r+40,y+800);
     
-    first.control();
     
     
-       if ( x >= r-enemyS/2 && x<= r+enemyS/2)
+       if ( gameY <= y+enemyS/2 && x >= r-enemyS/2 && x<=r+enemyS/2)
 
       {
         finish.finish();
@@ -26,6 +25,7 @@ class Enemy
       
     if(y>height)
     {
+      
       r=random(340);
       y= random(20);
       
