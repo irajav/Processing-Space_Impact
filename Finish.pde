@@ -5,6 +5,7 @@ class Finish
     background(0);
     background(galaxy);
       text("GAME OVER!!" , width/2,height/2);
+      bgsound.stop();
        noLoop();
   }
 }

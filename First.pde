@@ -6,19 +6,23 @@ class First
     
   void first()
   {
-    
+
     noCursor();
     background(galaxy);
     cannon(gameX);
     control();
     
     enemy.enemy();
-         font();
+    font();
+     next();
     
   //  asteroids.asteroids();
+
     
    asteroids();
-   next();
+
+
+    
    over();
  //  target();
    
@@ -151,10 +155,19 @@ class First
   
       void next()
   {
-    if(score >= 15)
+    if(score >= 5)
     {
       scoring2();
       enemy2.enemy2();
+    }
+    if(score >= 7)
+    {
+       for(int i = 0; i < 5; i++)
+       {
+          image(asteroid,astX[i],astY[i],size,size);
+          astX[i] = -50;
+          astY[i] = -50;
+       }
     }
     else
     {
