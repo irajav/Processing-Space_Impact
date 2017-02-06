@@ -13,7 +13,7 @@ class Second
     //cannon(gameX);
  //   asteroids();
  
- text(score2, width-20, 40);
+ text(score, width-20, 40);
 
     
   }

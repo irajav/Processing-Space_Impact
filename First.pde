@@ -2,7 +2,8 @@ class First
 {
   float x = 40;
   
-  
+    PFont font3;
+    
   void first()
   {
     
@@ -12,7 +13,7 @@ class First
     control();
     
     enemy.enemy();
-    
+         font();
     
   //  asteroids.asteroids();
     
@@ -20,13 +21,22 @@ class First
    next();
    over();
  //  target();
-       
-   text(score, width-40, 40);
+   
+
+   text(score, width-40, 100);
     
   }
   
+  void font()
+  {
+    font3 = loadFont("SourceCodePro-Bold-20.vlw");
+    textFont(font3,20);
+    
+  }
   void scoring()
   {
+    
+
       text(one[one_index], x,30);
       
       
@@ -131,7 +141,7 @@ class First
               bang.play();
               pew.stop();
               astX[i]=getRandomX();
-              astY[i] = 40;
+              astY[i] = 60;
               
               score++;
             }
@@ -141,7 +151,7 @@ class First
   
       void next()
   {
-    if(score >= 5)
+    if(score >= 15)
     {
       scoring2();
       enemy2.enemy2();
@@ -163,6 +173,7 @@ class First
       {
 
         finish.finish();
+        
  
       }
       

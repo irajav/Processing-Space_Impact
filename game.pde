@@ -30,12 +30,12 @@ boolean shoot = false;
 
 String[] one = 
 {
-  "******LEVEL 1*******"
+  "------------------\n******LEVEL 1******\n------------------"
 };
 
 String[] two =
 {
-  "*****LEVEL 2********"
+  "------------------\n******LEVEL 2******\n------------------"
 };
 
 int two_index =0;
@@ -43,7 +43,7 @@ int two_index =0;
 int one_index = 0;
 
 int score = 0;
-int score2 = 0;
+
 
    int ang = 1;
    int ang2 = 2;
@@ -72,7 +72,7 @@ int score2 = 0;
    int size = 50;
    
    int[] astX = {getRandomX(), getRandomX(), getRandomX(), getRandomX(), getRandomX()};
-   int[] astY = {40,40,40,40,40};
+   int[] astY = {60,60,60,60,60};
    
   int missileDrops = 5;
   Enemy[] drops = new Enemy[missileDrops]; 
