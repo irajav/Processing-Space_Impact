@@ -13,6 +13,7 @@ SoundFile powerup;
 SoundFile pew;
 SoundFile boom;
 SoundFile sonic;
+SoundFile countdown;
 
 
 PImage spaceship;
@@ -111,6 +112,7 @@ void setup()
   pew = new SoundFile(this, "pew.wav");
   boom = new SoundFile(this, "boom.mp3");
   sonic = new SoundFile(this,"sonic.wav");
+  countdown = new SoundFile(this, "countdown.mp3");
   
   for (int i = 0; i <drops.length; i++)
   {
@@ -123,6 +125,8 @@ void setup()
     drops2[i] = new Enemy2();
     enemy2 = new Enemy2();
   }
+  
+  countdown.play();
   
 }
 
@@ -147,6 +151,7 @@ void mousePressed()
   {
     load = true;
     powerup.play();
+    countdown.stop();
   }
 }
   
