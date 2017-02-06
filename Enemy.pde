@@ -4,10 +4,12 @@ class Enemy
   void enemy()
   {
     mission(gameX);
+    
   }
   void mission(float x)
   {
     
+   
     y=y+15;
     image(missile,r,y,enemyS,enemyS);
  //   strokeWeight(3);

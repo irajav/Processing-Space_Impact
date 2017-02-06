@@ -122,7 +122,7 @@ class First
       
       enemy.enemy();
       
-
+      enemy2.enemy2();
 
     }
   }

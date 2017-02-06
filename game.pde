@@ -4,6 +4,7 @@ First first;
 Finish finish;
 //Second second;
 Enemy enemy;
+Enemy2 enemy2;
 //Asteroids asteroids;
 
 import processing.sound.*;
@@ -11,12 +12,14 @@ SoundFile bang;
 SoundFile powerup;
 SoundFile pew;
 SoundFile boom;
+SoundFile sonic;
 
 
 PImage spaceship;
 //PImage gradient;
 PImage asteroid;
 PImage missile;
+PImage missile2;
 PImage galaxy;
 
 boolean load = false;
@@ -41,6 +44,8 @@ int score2 = 0;
    
    int enemyS = 80;
    
+   int enemy2S = 70;
+   
    int spaceX = 128;
    int spaceY = 290;
    
@@ -63,10 +68,14 @@ int score2 = 0;
   int missileDrops = 5;
   Enemy[] drops = new Enemy[missileDrops]; 
    
+   int missD = 3;
+   Enemy2[] drops2 = new Enemy2[missD];
+   
    float r = random(340);
   float y = random(20);
   
-   
+   float r2 = random(330);
+   float y2 = random(20);
    
 void setup()
 {
@@ -78,8 +87,9 @@ void setup()
 //  gradient = loadImage("gradient.jpg");
   asteroid = loadImage("asteroid.png");
   missile = loadImage("missile.png");
-  
+  missile2 = loadImage("missile2.png");
   galaxy = loadImage("galaxy.jpg");
+  
   
   welcome = new Welcome();
   loading = new Loading();
@@ -93,11 +103,18 @@ void setup()
   powerup = new SoundFile(this, "powerup.mp3");
   pew = new SoundFile(this, "pew.wav");
   boom = new SoundFile(this, "boom.mp3");
+  sonic = new SoundFile(this,"sonic.wav");
   
   for (int i = 0; i <drops.length; i++)
   {
     drops[i] = new Enemy();
     enemy = new Enemy();
+  }
+  
+  for(int i = 0; i<drops2.length; i++)
+  {
+    drops2[i] = new Enemy2();
+    enemy2 = new Enemy2();
   }
   
 }
