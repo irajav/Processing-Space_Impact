@@ -114,8 +114,7 @@ void setup()
   boom = new SoundFile(this, "boom.mp3");
   sonic = new SoundFile(this,"sonic.wav");
   countdown = new SoundFile(this, "countdown.mp3");
-  bgsound = new SoundFile(this, "bgsound.wav");
-  
+
   for (int i = 0; i <drops.length; i++)
   {
     drops[i] = new Enemy();
@@ -127,10 +126,16 @@ void setup()
     drops2[i] = new Enemy2();
     enemy2 = new Enemy2();
   }
-  
+ 
+   bgsound = new SoundFile(this, "bgsound.wav");
+   bgsound.play();
+   bgsound.stop();
+   bgsound.loop();
+   
   countdown.play();
   
-  bgsound.play();
+ // bgsound.play();
+
 
   
 }
