@@ -31,6 +31,13 @@ String[] one =
   "******LEVEL 1*******"
 };
 
+String[] two =
+{
+  "*****LEVEL 2********"
+};
+
+int two_index =0;
+
 int one_index = 0;
 
 int score = 0;

@@ -9,13 +9,16 @@ class First
     background(galaxy);
     control();
     
-    scoring();
+    enemy.enemy();
+    
+    
   //  asteroids.asteroids();
     cannon(gameX);
    asteroids();
    next();
    over();
  //  target();
+       
    
     
   }
@@ -33,6 +36,24 @@ class First
         {
           x = w+40;
           one_index = (one_index+1)%one.length;
+        }
+      }
+    
+  }
+  
+    void scoring2()
+  {
+      text(two[two_index], x,30);
+    
+      
+      x = x-5;
+      
+      float w = textWidth(two[two_index]);
+      {
+        if (x < -w+40)
+        {
+          x = w+40;
+          two_index = (two_index+1)%two.length;
         }
       }
     
@@ -118,12 +139,12 @@ class First
   {
     if(score >= 5)
     {
-      
-      
-      enemy.enemy();
-      
+      scoring2();
       enemy2.enemy2();
-
+    }
+    else
+    {
+      scoring();
     }
   }
   

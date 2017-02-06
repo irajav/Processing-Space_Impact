@@ -7,7 +7,7 @@ class Enemy2
   
   void mission2(float x)
   {
-    y2=y2+3;
+    y2=y2+5;
     image(missile2,r2,y2,enemy2S,enemy2S);
     
     
