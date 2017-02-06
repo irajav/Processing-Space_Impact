@@ -10,6 +10,7 @@ import processing.sound.*;
 SoundFile bang;
 SoundFile powerup;
 SoundFile pew;
+SoundFile boom;
 
 
 PImage spaceship;
@@ -91,6 +92,7 @@ void setup()
   bang = new SoundFile(this, "bang.mp3");
   powerup = new SoundFile(this, "powerup.mp3");
   pew = new SoundFile(this, "pew.wav");
+  boom = new SoundFile(this, "boom.mp3");
   
   for (int i = 0; i <drops.length; i++)
   {
