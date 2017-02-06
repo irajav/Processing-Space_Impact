@@ -19,14 +19,14 @@ class First
    over();
  //  target();
        
-   
+   text(score, width-40, 40);
     
   }
   
   void scoring()
   {
       text(one[one_index], x,30);
-      text(score, width-40, 40);
+      
       
       x = x-5;
       
