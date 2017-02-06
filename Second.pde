@@ -72,7 +72,7 @@ class Second
             {
               strike = true;
               laser();
-              image(asteroid,astX[i],astY[i],size,size);
+              image(asteroid,astX[i],astY[i]++,size,size);
               bang.play();
               astX[i]=getRandomX();
               astY[i] = 40;

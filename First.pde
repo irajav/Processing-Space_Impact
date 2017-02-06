@@ -8,14 +8,14 @@ class First
     
     noCursor();
     background(galaxy);
-    
+    cannon(gameX);
     control();
     
     enemy.enemy();
     
     
   //  asteroids.asteroids();
-    cannon(gameX);
+    
    asteroids();
    next();
    over();
@@ -114,7 +114,7 @@ class First
   
   void cannon(int shotX)
   {
-    boolean strike = false;
+  //  boolean strike = false;
 
     
     if(keyCode == UP)
@@ -125,7 +125,7 @@ class First
           {
             if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
             {
-              strike = true;
+            //  strike = true;
               laser();
               image(asteroid,astX[i],astY[i],size,size);
               bang.play();
