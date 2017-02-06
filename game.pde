@@ -14,6 +14,7 @@ SoundFile pew;
 SoundFile boom;
 SoundFile sonic;
 SoundFile countdown;
+SoundFile bgsound;
 
 
 PImage spaceship;
@@ -113,6 +114,7 @@ void setup()
   boom = new SoundFile(this, "boom.mp3");
   sonic = new SoundFile(this,"sonic.wav");
   countdown = new SoundFile(this, "countdown.mp3");
+  bgsound = new SoundFile(this, "bgsound.wav");
   
   for (int i = 0; i <drops.length; i++)
   {
@@ -128,6 +130,9 @@ void setup()
   
   countdown.play();
   
+  bgsound.play();
+
+  
 }
 
 void draw()
@@ -140,8 +145,9 @@ void draw()
     loading.loading();
     
   }
+  
+  
 }
-
 
 
 

@@ -2,11 +2,13 @@ class First
 {
   float x = 40;
   
+  
   void first()
   {
     
     noCursor();
     background(galaxy);
+    
     control();
     
     enemy.enemy();
@@ -61,6 +63,8 @@ class First
   
   void control()
   {
+    
+      
     image(spaceship,gameX,gameY, spaceSize,spaceSize);
     
     if(gameX < 0)

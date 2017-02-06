@@ -10,6 +10,7 @@ class Loading
     if (spaceY < 0 )
     {
       first.first();
+      
       noCursor();
       
     }
