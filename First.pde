@@ -160,7 +160,7 @@ class First
       scoring2();
       enemy2.enemy2();
     }
-    if(score >= 7)
+    else if(score >= 7)
     {
        for(int i = 0; i < 5; i++)
        {

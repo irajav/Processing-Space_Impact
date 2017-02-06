@@ -34,6 +34,11 @@ class Enemy
       
     }
     
+            if(score >= 7)
+    {
+      r = -80;
+      y = -80;
+    }
 
   }
   
