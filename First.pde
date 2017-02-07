@@ -152,7 +152,7 @@ class First
       }
       
     //asteroids will disappear from the screen  
-    if(score >= 20)
+    if(score >= 30)
     {
        for(int i = 0; i < 5; i++)
        {
@@ -187,13 +187,13 @@ class First
   
   void next()
   {
-    if(score >= 20)
+    if(score >= 30)
     {
       header();
       monster();
       control2();
     }
-    else if (score >= 10)
+    else if (score >= 15)
     {
       scoring2();
       enemy2.enemy2();

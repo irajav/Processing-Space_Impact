@@ -25,7 +25,7 @@ class Enemy2
       y2= random(20);
     }//end if
     
-    if(score >= 20)
+    if(score >= 30)
     {
       r2 = -100;
       y2 = -100;

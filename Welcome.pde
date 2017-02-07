@@ -12,8 +12,6 @@ class Welcome
    PFont font;
    PFont font2;
    
-
-   
   void welcome()
   {
     frame();
@@ -88,19 +86,16 @@ class Welcome
     
     //if mouse is pointed at the center or at the spaceship, hand cursor will be shown
     //otherwise it will be the basic arrow cursor
-    //the rest of the game, the cursor will be hidden
+  
     if (mouseX > spaceX && mouseY > spaceY && mouseX < spaceX + 90 && mouseY < spaceY + 100)
     {
       cursor(HAND);
     }
-    else if (mouseX < spaceX && mouseY < spaceY && mouseX > spaceX + 90 && mouseY > spaceY + 100)
+    else
     {
       cursor(ARROW);
     }
-    else
-    {
-      noCursor();
-    }
+
     
   }
   

@@ -124,7 +124,7 @@ int monstSize2 = 80;
    
 int monster3X = 160;
 int monster3Y = 300; 
-int monsterSpeed3 = 2;
+int monsterSpeed3 = 4;
 int monstSize3 = 150;
 
    

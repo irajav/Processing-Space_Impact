@@ -28,7 +28,7 @@ class Enemy
     
     
     //if score reaches 20 or more, missiles will disappear from the screen
-    if(score >= 20)
+    if(score >= 30)
     {
       r = -80;
       y = -80;
