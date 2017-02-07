@@ -9,7 +9,7 @@ class Enemy
   {
     
    
-    y=y+18;
+    y=y+20;
     image(missile,r,y,enemyS,enemyS);
  //   strokeWeight(3);
  //  stroke(random(255),random(255),random(255));
@@ -34,7 +34,7 @@ class Enemy
       
     }
     
-            if(score >= 7)
+            if(score >= 20)
     {
       r = -80;
       y = -80;

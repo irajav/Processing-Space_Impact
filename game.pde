@@ -2,10 +2,10 @@ Welcome welcome;
 Loading loading;
 First first;
 Finish finish;
-Second second;
+//Second second;
 Enemy enemy;
 Enemy2 enemy2;
-//Asteroids asteroids;
+
 
 import processing.sound.*;
 SoundFile bang;
@@ -23,6 +23,8 @@ PImage asteroid;
 PImage missile;
 PImage missile2;
 PImage galaxy;
+PImage monster;
+PImage monster2;
 
 boolean load = false;
 
@@ -38,9 +40,16 @@ String[] two =
   "------------------\n******LEVEL 2******\n------------------"
 };
 
+String[] three =
+{
+  "------------------\n******MASTER******\n------------------"
+};
+
 int two_index =0;
 
 int one_index = 0;
+
+int three_index = 0;
 
 int score = 0;
 
@@ -62,6 +71,12 @@ int score = 0;
    
    int gameX = 125;
    int gameY = 500;
+   
+   int monsterX = 125;
+   int monsterSpeed = 3;
+   
+   int monster2X = 20;
+   int monsterSpeed2 = 2;
    
    int getRandomX()
    {
@@ -98,13 +113,16 @@ void setup()
   missile = loadImage("missile.png");
   missile2 = loadImage("missile2.png");
   galaxy = loadImage("galaxy.jpg");
+  monster = loadImage("monster.png");
+  monster2 = loadImage("monster2.png");
+  
   
   
   welcome = new Welcome();
   loading = new Loading();
   first = new First();
   finish = new Finish();
- second = new Second();
+// second = new Second();
   
 //  asteroids = new Asteroids();
   

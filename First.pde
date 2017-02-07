@@ -14,13 +14,16 @@ class First
     
     enemy.enemy();
     font();
-     next();
+    asteroids();
     
+      next();
+     
   //  asteroids.asteroids();
 
     
-   asteroids();
-
+   
+ 
+    
 
     
    over();
@@ -72,7 +75,26 @@ class First
           two_index = (two_index+1)%two.length;
         }
       }
+      
+      
     
+  }
+  
+  void header()
+  {
+          text(three[three_index], x,30);
+    
+      
+      x = x-5;
+      
+      float w = textWidth(three[three_index]);
+      {
+        if (x < -w+40)
+        {
+          x = w+40;
+          three_index = (three_index+1)%three.length;
+        }
+      }
   }
   
   void control()
@@ -151,28 +173,63 @@ class First
             }
           }
       }
+      
+        if(score >= 20)
+    {
+      
+      
+       for(int i = 0; i < 5; i++)
+       {
+          image(asteroid,astX[i],astY[i],size,size);
+         
+          astX[i] = -50;
+          astY[i] = -50;
+          
+       }
+    }
   }
   
       void next()
   {
-    if(score >= 5)
+    if(score >= 20)
+    {
+      header();
+      monster();
+
+  
+    }
+    else if (score >= 10)
     {
       scoring2();
       enemy2.enemy2();
-    }
-    else if(score >= 7)
-    {
-       for(int i = 0; i < 5; i++)
-       {
-          image(asteroid,astX[i],astY[i],size,size);
-          astX[i] = -50;
-          astY[i] = -50;
-       }
+    
     }
     else
     {
       scoring();
     }
+  }
+  
+    void monster()
+  {
+    image(monster, monsterX, 120, 100,100);
+    monsterX += monsterSpeed;
+    
+    if (monsterX + 100 > width || monsterX < 0)
+    {
+      monsterSpeed = -monsterSpeed;
+    }
+    
+    image(monster2, monster2X, 200, 80,80);
+    monster2X += monsterSpeed2;
+    
+    if(monster2X + 80 > width || monster2X <0 )
+    {
+      monsterSpeed2 = -monsterSpeed2;
+    }
+    
+    
+
   }
   
 
