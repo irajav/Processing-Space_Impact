@@ -11,35 +11,28 @@ class Enemy
    
     y=y+20;
     image(missile,r,y,enemyS,enemyS);
- //   strokeWeight(3);
- //  stroke(random(255),random(255),random(255));
-   //line(r+40,y+90,r+40,y+800);
     
-    
-    
-       if ( gameY <= y+enemyS/2 && x >= r-enemyS/2 && x<=r+enemyS/2)
-
-      {
+    // if missiles touch the spaceship, game will be over
+    if ( gameY <= y+enemyS/2 && x >= r-enemyS/2 && x<=r+enemyS/2)
+    {
         boom.play();
         finish.finish();
-
-      }
+    }//end if
       
     if(y>height)
     {
       
       r=random(340);
-      y= random(20);
-      
-      
-    }
+      y= random(20);      
+    }//end if
     
-            if(score >= 20)
+    
+    //if score reaches 20 or more, missiles will disappear from the screen
+    if(score >= 20)
     {
       r = -80;
       y = -80;
-    }
-
+    }//end if
   }
   
   

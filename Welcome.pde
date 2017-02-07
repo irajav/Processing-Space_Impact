@@ -81,18 +81,17 @@ class Welcome
     arc(width/2, height/2+50, 180, 180, radians(ang3), radians(ang3+280));
     
     image(spaceship,spaceX, spaceY, 100, 100);
-    
-
-
   }
   
-      void fxn()
-  {
-        if (mouseX > spaceX && mouseY > spaceY && mouseX < spaceX + 90 && mouseY < spaceY + 100)
+  void fxn()
+  { 
+    
+    //if mouse is pointed at the center or at the spaceship, hand cursor will be shown
+    //otherwise it will be the basic arrow cursor
+    //the rest of the game, the cursor will be hidden
+    if (mouseX > spaceX && mouseY > spaceY && mouseX < spaceX + 90 && mouseY < spaceY + 100)
     {
-      
       cursor(HAND);
-      
     }
     else if (mouseX < spaceX && mouseY < spaceY && mouseX > spaceX + 90 && mouseY > spaceY + 100)
     {

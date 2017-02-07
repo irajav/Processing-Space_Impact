@@ -1,70 +1,49 @@
 class First
 {
   float x = 40;
-  
-    PFont font3;
+  PFont font3;
     
   void first()
   {
-
-  //  noCursor();
     background(galaxy);
     cannon(gameX);
     control();
-    
     enemy.enemy();
     font();
     asteroids();
+    next();
+    over(); 
     
-      next();
-     
-  //  asteroids.asteroids();
-
-    
-   
- 
-    
-
-    
-   over();
- //  target();
-   
-
-   text(score, width-40, 100);
-    
+    //this will list the score at the top right of the screen
+    text(score, width-40, 100);
   }
   
   void font()
   {
     font3 = loadFont("SourceCodePro-Bold-20.vlw");
     textFont(font3,20);
-    
-  }
-  void scoring()
-  {
-    
-
-      text(one[one_index], x,30);
-      
-      
-      x = x-5;
-      
-      float w = textWidth(one[one_index]);
-      {
-        if (x < -w+40)
-        {
-          x = w+40;
-          one_index = (one_index+1)%one.length;
-        }
-      }
-    
   }
   
-    void scoring2()
+  //This is the level one of the game
+  void scoring()
+  {
+    text(one[one_index], x,30);
+    x = x-5;
+    
+    float w = textWidth(one[one_index]);
+    {
+      if (x < -w+40)
+      {
+         x = w+40;
+         one_index = (one_index+1)%one.length;
+       }
+     } 
+  }
+  
+  //this is the level two of the game - enemy2[bombs] will show up
+  void scoring2()
   {
       text(two[two_index], x,30);
-    
-      
       x = x-5;
       
       float w = textWidth(two[two_index]);
@@ -75,34 +54,33 @@ class First
           two_index = (two_index+1)%two.length;
         }
       }
-      
-      
-    
   }
   
+  
+  //this is the level 3 of the game or the master level - bombs and missiles will disappear
+  //and will be replaced with three monsters
   void header()
   {
-          text(three[three_index], x,30);
-    
-      
-      x = x-5;
-      
-      float w = textWidth(three[three_index]);
-      {
-        if (x < -w+40)
-        {
+    text(three[three_index], x,30); 
+    x = x-5;
+   
+    float w = textWidth(three[three_index]);
+    {
+       if (x < -w+40)
+       {
           x = w+40;
           three_index = (three_index+1)%three.length;
         }
-      }
+     }
   }
   
+  //this allows the user to control the spaceship either left or right. 
+  //up key will allow the user to shoot laser
   void control()
   {
-    
-      
     image(spaceship,gameX,gameY, spaceSize,spaceSize);
-    
+   
+    //allows spaceship to stay within the screen
     if(gameX < 0)
     { 
       gameX = 0+5;
@@ -118,16 +96,13 @@ class First
       if(keyCode == LEFT)
       {
         gameX -= 5;
-        //gameY -= 0.1;
       }
       else if(keyCode == RIGHT)
       {
         gameX += 5;
-
       }
       else if(keyCode == UP)
       {
-      //  laser();
         pew.play();
       }
     }
@@ -158,55 +133,49 @@ class First
   
   void cannon(int shotX)
   {
-  //  boolean strike = false;
-
-    
     if(keyCode == UP)
       {
-   
-
-          for(int i = 0; i < 5; i++)
-          {
-            if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
-            {
-            //  strike = true;
-            //  laser();
+        for(int i = 0; i < 5; i++)
+        {
+           if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
+           {
               image(asteroid,astX[i],astY[i],size,size);
               bang.play();
               pew.stop();
               astX[i]=getRandomX();
               astY[i] = 60;
               
+              //if laser hits asteroid, score is incremented by one
               score++;
-            }
-          }
+           }
+        }
       }
       
-        if(score >= 20)
+    //asteroids will disappear from the screen  
+    if(score >= 20)
     {
-      
-      
        for(int i = 0; i < 5; i++)
        {
           image(asteroid,astX[i],astY[i],size,size);
-         
           astX[i] = -50;
           astY[i] = -50;
-          
        }
     }
   }
   
+  
+  //control for master level
+  //up key will allow spaceship to move up
+  //down key will allow spaceship to move down
   void control2()
   {
     if(keyPressed)
     {
-          if(keyCode == UP)
+      if(keyCode == UP)
       {
         gameY -= 5;
         noStroke();
         pew.stop();
-  
       }
       else if(keyCode == DOWN)
       {
@@ -214,22 +183,21 @@ class First
       }
     }
   }
-      void next()
+  
+  
+  void next()
   {
     if(score >= 20)
     {
       header();
       monster();
       control2();
-
-  
     }
     else if (score >= 10)
     {
       scoring2();
       enemy2.enemy2();
       laser();
-    
     }
     else
     {
@@ -240,6 +208,8 @@ class First
   
     void monster()
   {
+    
+    //allows the monsters to stay within the screen
     image(monster, monsterX, monsterY, monstSize,monstSize);
     monsterX += monsterSpeed;
     
@@ -265,11 +235,11 @@ class First
     }
 
     
+    //if spaceship hits any of the monsters, game will be over
     if (gameY <= monsterY+monstSize/2 && gameX >= monsterX-monstSize/2 && gameX <= monsterX+monstSize/2 )
     {
       finish.finish();
     }
-    
         
     if (gameY <= monster2Y+monstSize2/2 && gameX >= monster2X-monstSize2/2 && gameX <= monster2X+monstSize2/2 )
     {
@@ -281,6 +251,7 @@ class First
       finish.finish();
     }
     
+    //if spaceship surpasses the monsters, you win
     if(gameY <= monsterY-80)
     {
       winner.winner();
@@ -288,9 +259,8 @@ class First
     
   }
   
-
-
   
+  // if asteroid touches the bottom of the screen, game will be over
   void over()
   {
     for(int i = 0; i<5; i++)
@@ -299,13 +269,10 @@ class First
       {
 
         finish.finish();
-        
- 
       }
-      
-
     }
   }
+  
 }
     
   
