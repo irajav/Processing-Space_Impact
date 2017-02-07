@@ -18,7 +18,6 @@ SoundFile bgsound;
 
 
 PImage spaceship;
-//PImage gradient;
 PImage asteroid;
 PImage missile;
 PImage missile2;

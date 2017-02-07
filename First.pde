@@ -127,7 +127,7 @@ class First
       }
       else if(keyCode == UP)
       {
-        laser();
+      //  laser();
         pew.play();
       }
     }
@@ -135,8 +135,16 @@ class First
   
   void laser()
   {
-    stroke(random(255),random(255),random(255));
-    line(gameX+48,gameY+5,gameX,gameY*-200);
+    
+    if(keyPressed)
+    {
+      if(keyCode == UP)
+      {
+            stroke(random(255),random(255),random(255));
+            line(gameX+48,gameY+5,gameX,gameY*-200);
+      }
+    }
+
   }
   
   
@@ -162,7 +170,7 @@ class First
             if((shotX >= (astX[i]-size/2))&&(shotX <= (astX[i]+size/2)))
             {
             //  strike = true;
-              laser();
+            //  laser();
               image(asteroid,astX[i],astY[i],size,size);
               bang.play();
               pew.stop();
@@ -197,6 +205,8 @@ class First
       {
         gameY -= 5;
         noStroke();
+        pew.stop();
+  
       }
       else if(keyCode == DOWN)
       {
@@ -218,11 +228,13 @@ class First
     {
       scoring2();
       enemy2.enemy2();
+      laser();
     
     }
     else
     {
       scoring();
+      laser();
     }
   }
   
