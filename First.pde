@@ -228,24 +228,49 @@ class First
   
     void monster()
   {
-    image(monster, monsterX, 120, 100,100);
+    image(monster, monsterX, monsterY, monstSize,monstSize);
     monsterX += monsterSpeed;
     
-    if (monsterX + 100 > width || monsterX < 0)
+    if (monsterX + monstSize > width || monsterX < 0)
     {
       monsterSpeed = -monsterSpeed;
     }
     
-    image(monster2, monster2X, 200, 80,80);
+    image(monster2, monster2X, monster2Y, monstSize2,monstSize2);
     monster2X += monsterSpeed2;
     
-    if(monster2X + 80 > width || monster2X <0 )
+    if(monster2X + monstSize2 > width || monster2X <0 )
     {
       monsterSpeed2 = -monsterSpeed2;
     }
     
+    image(monster3, monster3X, monster3Y, monstSize3,monstSize3);
+    monster3X += monsterSpeed3;
     
+    if(monster3X + monstSize3 > width || monster3X <0 )
+    {
+      monsterSpeed3 = -monsterSpeed3;
+    }
 
+    
+    if (gameY <= monsterY+monstSize/2 && gameX >= monsterX-monstSize/2 && gameX <= monsterX+monstSize/2 )
+    {
+      finish.finish();
+    }
+    
+        
+    if (gameY <= monster2Y+monstSize2/2 && gameX >= monster2X-monstSize2/2 && gameX <= monster2X+monstSize2/2 )
+    {
+      finish.finish();
+    }
+    
+    if (gameY <= monster3Y+monstSize3/2 && gameX >= monster3X-monstSize3/2 && gameX <= monster3X+monstSize3/2 )
+    {
+      finish.finish();
+    }
+    
+    
+    
   }
   
 

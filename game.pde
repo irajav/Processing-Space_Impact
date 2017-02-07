@@ -25,6 +25,7 @@ PImage missile2;
 PImage galaxy;
 PImage monster;
 PImage monster2;
+PImage monster3;
 
 boolean load = false;
 
@@ -73,10 +74,21 @@ int score = 0;
    int gameY = 500;
    
    int monsterX = 125;
+   int monsterY =120;
    int monsterSpeed = 5;
+   int monstSize = 100;
+   
    
    int monster2X = 20;
+   int monster2Y = 230; 
    int monsterSpeed2 = 3;
+   int monstSize2 = 80;
+   
+   int monster3X = 160;
+   int monster3Y = 300; 
+   int monsterSpeed3 = 4;
+   int monstSize3 = 150;
+   
    
    int getRandomX()
    {
@@ -115,6 +127,7 @@ void setup()
   galaxy = loadImage("galaxy.jpg");
   monster = loadImage("monster.png");
   monster2 = loadImage("monster2.png");
+  monster3 = loadImage("monster3.png");
   
   
   
