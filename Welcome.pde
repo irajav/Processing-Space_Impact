@@ -94,9 +94,13 @@ class Welcome
       cursor(HAND);
       
     }
-    else
+    else if (mouseX < spaceX && mouseY < spaceY && mouseX > spaceX + 90 && mouseY > spaceY + 100)
     {
       cursor(ARROW);
+    }
+    else
+    {
+      noCursor();
     }
     
   }

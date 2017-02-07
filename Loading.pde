@@ -11,7 +11,7 @@ class Loading
     {
       first.first();
       
-      noCursor();
+    //  noCursor();
       
     }
   }

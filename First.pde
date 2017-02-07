@@ -7,7 +7,7 @@ class First
   void first()
   {
 
-    noCursor();
+  //  noCursor();
     background(galaxy);
     cannon(gameX);
     control();
@@ -281,7 +281,10 @@ class First
       finish.finish();
     }
     
-    
+    if(gameY <= monsterY-80)
+    {
+      winner.winner();
+    }
     
   }
   

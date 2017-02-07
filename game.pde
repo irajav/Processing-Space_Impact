@@ -5,6 +5,7 @@ Finish finish;
 //Second second;
 Enemy enemy;
 Enemy2 enemy2;
+Winner winner;
 
 
 import processing.sound.*;
@@ -85,7 +86,7 @@ int score = 0;
    
    int monster3X = 160;
    int monster3Y = 300; 
-   int monsterSpeed3 = 4;
+   int monsterSpeed3 = 2;
    int monstSize3 = 150;
    
    
@@ -135,6 +136,7 @@ void setup()
   first = new First();
   finish = new Finish();
 // second = new Second();
+  winner = new Winner();
   
 //  asteroids = new Asteroids();
   
