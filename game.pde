@@ -73,10 +73,10 @@ int score = 0;
    int gameY = 500;
    
    int monsterX = 125;
-   int monsterSpeed = 3;
+   int monsterSpeed = 5;
    
    int monster2X = 20;
-   int monsterSpeed2 = 2;
+   int monsterSpeed2 = 3;
    
    int getRandomX()
    {

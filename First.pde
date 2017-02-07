@@ -189,12 +189,28 @@ class First
     }
   }
   
+  void control2()
+  {
+    if(keyPressed)
+    {
+          if(keyCode == UP)
+      {
+        gameY -= 5;
+        noStroke();
+      }
+      else if(keyCode == DOWN)
+      {
+        gameY += 5;
+      }
+    }
+  }
       void next()
   {
     if(score >= 20)
     {
       header();
       monster();
+      control2();
 
   
     }
