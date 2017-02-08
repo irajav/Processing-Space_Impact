@@ -113,8 +113,8 @@ float y2 = random(20);
 
 //variables for 3 monsters in master level
 int monsterX = 125;
-int monsterY =120;
-int monsterSpeed = 5;
+int monsterY = 120;
+int monsterSpeed = 4;
 int monstSize = 100;
      
 int monster2X = 20;
@@ -124,7 +124,7 @@ int monstSize2 = 80;
    
 int monster3X = 160;
 int monster3Y = 300; 
-int monsterSpeed3 = 4;
+int monsterSpeed3 = 5;
 int monstSize3 = 150;
 
    

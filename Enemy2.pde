@@ -7,7 +7,7 @@ class Enemy2
   
   void mission2(float x)
   {
-    y2=y2+7;
+    y2=y2+10;
     image(missile2,r2,y2,enemy2S,enemy2S);
     
      if ( gameY <= y2+enemy2S/2 && x >= r2-enemy2S/2 && x<=r2+enemy2S/2)

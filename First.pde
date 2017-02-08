@@ -115,6 +115,7 @@ class First
     {
       if(keyCode == UP)
       {
+            strokeWeight(4);
             stroke(random(255),random(255),random(255));
             line(gameX+48,gameY+5,gameX,gameY*-200);
       }
@@ -252,7 +253,7 @@ class First
     }
     
     //if spaceship surpasses the monsters, you win
-    if(gameY <= monsterY-80)
+    if(gameY <= 140)
     {
       winner.winner();
     }
