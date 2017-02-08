@@ -8,3 +8,5 @@ In LEVEL 1, there will be only 1 enemy, til you reach 15 asteroids, which will d
 
 If you pass through the three monsters, you win. 
 You lose if asteroids touch the bottom, if missiles hit you and if the space monsters hit you.
+
+https://youtu.be/39N_79s7XC0
